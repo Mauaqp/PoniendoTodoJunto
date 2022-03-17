@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './PersonaCard.css';
 
 class PersonaCard extends React.Component {
     constructor ( props ){
@@ -12,7 +13,7 @@ class PersonaCard extends React.Component {
         const {firstName, lastName, age, hairColor} = this.props;
 
         return (
-            <>
+            <div className="persona-div">
                 <div>
                     <h1>{lastName} , {firstName}</h1>
                 </div>
@@ -26,7 +27,7 @@ class PersonaCard extends React.Component {
                     }}
                 >Birthday Button for {firstName} {lastName}
                 </button>
-            </>
+            </div>
         )
     }
 }

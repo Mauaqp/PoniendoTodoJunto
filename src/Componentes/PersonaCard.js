@@ -16,8 +16,16 @@ class PersonaCard extends React.Component {
                 <div>
                     <h1>{lastName} , {firstName}</h1>
                 </div>
-                <p>Age : {age}</p>
+                {/* para que refleje los cambios, debe tener estado */}
+                <p>Age : {this.state.addAge}</p>
                 <p>Hair Color : {hairColor}</p>
+                <button
+                    onClick={() => {
+                    console.log("clic");
+                    this.setState({ addAge: this.state.addAge + 1 });
+                    }}
+                >Birthday Button for {firstName} {lastName}
+                </button>
             </>
         )
     }
